@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'lugar',
+    loadChildren: () => import('./lugar/lugar.module').then( m => m.LugarPageModule)
+  },
 ];
 
 @NgModule({
